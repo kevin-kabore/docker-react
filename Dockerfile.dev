@@ -1,0 +1,26 @@
+# Specify a base image
+FROM node:alpine
+
+
+WORKDIR /app
+# Copy all files in current working directory (./),
+# => into the container file system root (./)
+COPY package.json .
+
+# Install dependencies
+RUN npm install
+
+COPY . .
+
+# Or use WORKDIR to specify the location in the container's filesystem  
+
+
+
+# Default command
+CMD ["npm", "run", "start"]
+
+# To build the docker image from terminal, run:
+# docker build .
+
+# port mapping local port to container port
+# docker run -p 8080:8080 <imagename>
