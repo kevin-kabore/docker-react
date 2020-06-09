@@ -1,0 +1,9 @@
+sudo: required
+services: 
+  - docker
+
+before_install:
+  - docker build -t pskevin/docker-react -f Dockerfile.dev .
+
+script:
+  - docker run pskevin/docker-react npm run test -- --coverage
