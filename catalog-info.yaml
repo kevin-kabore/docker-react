@@ -1,0 +1,19 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: docker-react
+  description: test
+  labels:
+    system: internal-websites
+  annotations:
+    github.com/project-slug: kevin-kabore/docker-react
+  tags:
+    - javascript
+    - docker
+    - react
+spec:
+  type: service
+  lifecycle: experimental
+  owner: User:kevin-kabore
+  system: devhub
+  domain: kevin-kabore
